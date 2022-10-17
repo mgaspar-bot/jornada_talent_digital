@@ -1,7 +1,7 @@
 const fs = require('fs/promises')
 
 async function getJsonFromFile () {
-    var str = await fs.readFile('./csvs/prueba.csv');
+    var str = await fs.readFile('./csvs/barris9');
     console.log(str);
     let json = {
         "Barri":"HS",
@@ -11,14 +11,14 @@ async function getJsonFromFile () {
 
     const fieldNames = ["Pob","PobDones","PobHomes","Pob25_64","Pob65","Titulats","65sola","Index","Parats","RendaFamiliar"]
     //recorre la string i extreu les entre comillas
-    str = str.toString();
+    str = str.toString('utf-8');
     str = str.split('\n');
     for (let i = 0; i < str.length; i++) {
         console.log(`index:${i}`);
        let line = str[i].split(';');
        console.log(`line:${line}`);
         if (i == 1) {
-            json.Barri = line[0]
+            json.Barri = line[2]
         }
        if (i > 1){
             json.Data[fieldNames[i-2]] = line[2]
