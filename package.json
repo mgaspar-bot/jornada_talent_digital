@@ -1,0 +1,23 @@
+{
+  "name": "jornada_talent_digital",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mgaspar-bot/jornada_talent_digital.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mgaspar-bot/jornada_talent_digital/issues"
+  },
+  "homepage": "https://github.com/mgaspar-bot/jornada_talent_digital#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
