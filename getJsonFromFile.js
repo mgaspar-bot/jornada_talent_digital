@@ -9,6 +9,7 @@ async function getJsonFromFile () {
 
     const fieldNames = ["Pob","PobHomes","PobDones","Pob25_64","Pob65","Titulats","65sola","Index","Parats","RendaFamiliar"]
     //recorre la string i extreu les entre comillas
+    str = str.toString();
     str = str.split('\n');
     for (let i = 0; i < str.length; i++) {
        let line = str[i].split(';');
