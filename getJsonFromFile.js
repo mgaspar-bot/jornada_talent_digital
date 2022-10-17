@@ -17,10 +17,10 @@ async function getJsonFromFile () {
        let line = str[i].split(';');
        console.log(`line:${line}`);
         if (i == 1) {
-            json.Barri = line[1]
+            json.Barri = line[0]
         }
        if (i > 1){
-            json.Data[fieldNames[i-2]] = line[1]
+            json.Data[fieldNames[i-2]] = line[0]
        }
     }
 
