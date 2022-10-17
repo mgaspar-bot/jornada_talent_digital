@@ -3,9 +3,10 @@ const fs = require('fs/promises')
 async function getJsonFromFile () {
     var str = await fs.readFile('./csvs/prueba.csv');
     let json = {
-        "Barri":"",
+        "Barri":"HS",
         "Data": { }
     };
+    console.log(json);
 
     const fieldNames = ["Pob","PobHomes","PobDones","Pob25_64","Pob65","Titulats","65sola","Index","Parats","RendaFamiliar"]
     //recorre la string i extreu les entre comillas
@@ -21,7 +22,7 @@ async function getJsonFromFile () {
        }
     }
 
-    await fs.writeFile(`./jsons/${json.Barri}.json`, JSON.stringify(json))
+    // await fs.writeFile(`./jsons/${json.Barri}.json`, JSON.stringify(json))
     return json;
 }
 
