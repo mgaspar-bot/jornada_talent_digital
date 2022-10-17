@@ -1,7 +1,7 @@
 const fs = require('fs/promises')
 
 async function getJsonFromFile () {
-    var str = await fs.readFile('./csvs/barris9');
+    var str = await fs.readFile('./csvs/barris9.csv');
     console.log(str);
     let json = {
         "Barri":"HS",
