@@ -27,6 +27,8 @@ async function getJsonFromFile () {
     // await fs.writeFile(`./jsons/${json.Barri}.json`, JSON.stringify(json))
     console.log(`json: `);
     console.log(json);
+    console.log(json.Barri);
+    console.log(json.Data);
     return json;
 }
 
