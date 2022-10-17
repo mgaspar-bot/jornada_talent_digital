@@ -17,15 +17,16 @@ async function getJsonFromFile () {
        let line = str[i].split(';');
        console.log(`line:${line}`);
         if (i == 1) {
-            json.Barri = line[2]
+            json.Barri = line[1]
         }
        if (i > 1){
-            json.Data[fieldNames[i-2]] = line[2]
+            json.Data[fieldNames[i-2]] = line[1]
        }
     }
 
     // await fs.writeFile(`./jsons/${json.Barri}.json`, JSON.stringify(json))
-    console.log(`json: ${json}`);
+    console.log(`json: `);
+    console.log(json);
     return json;
 }
 
