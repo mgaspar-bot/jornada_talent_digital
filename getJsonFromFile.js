@@ -15,6 +15,7 @@ async function getJsonFromFile () {
     for (let i = 0; i < str.length; i++) {
         console.log(`index:${i}`);
        let line = str[i].split(';');
+       console.log(`line:${line}`);
         if (i == 1) {
             json.Barri = line[2]
         }
@@ -24,6 +25,7 @@ async function getJsonFromFile () {
     }
 
     // await fs.writeFile(`./jsons/${json.Barri}.json`, JSON.stringify(json))
+    console.log(`json: ${json}`);
     return json;
 }
 
