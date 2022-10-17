@@ -3,10 +3,10 @@ const app = express();
 
 const getJsonFromFile = require('./getJsonFromFile');
 
-const json = getJsonFromFile();
+// const json = getJsonFromFile();
 
 
-app.get('/', (req, res) => {
+app.get('/', async (req, res) => {
     // res.status(200).send({
     //     "Barri":"Raval",
     //     "Data":{
@@ -21,6 +21,7 @@ app.get('/', (req, res) => {
     //         "Parats":2
     //     }
     // })
+    const json = await getJsonFromFile();
     res.status(200).send(json);
 })
 
