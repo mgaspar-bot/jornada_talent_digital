@@ -13,12 +13,13 @@ async function getJsonFromFile () {
     str = str.toString();
     str = str.split('\n');
     for (let i = 0; i < str.length; i++) {
+        console.log(`index:${i}`);
        let line = str[i].split(';');
         if (i == 1) {
-        json.Barri = line[2]
-       }
+            json.Barri = line[2]
+        }
        if (i > 1){
-        json.Data[fieldNames[i-2]] = line[2]
+            json.Data[fieldNames[i-2]] = line[2]
        }
     }
 
