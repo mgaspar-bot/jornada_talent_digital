@@ -2,6 +2,7 @@ const fs = require('fs/promises')
 
 async function getJsonFromFile () {
     var str = await fs.readFile('./csvs/prueba.csv');
+    console.log(str);
     let json = {
         "Barri":"HS",
         "Data": { }
@@ -17,7 +18,7 @@ async function getJsonFromFile () {
        let line = str[i].split(';');
        console.log(`line:${line}`);
         if (i == 1) {
-            json.Barri = line[2]
+            json.Barri = line[0]
         }
        if (i > 1){
             json.Data[fieldNames[i-2]] = line[2]
