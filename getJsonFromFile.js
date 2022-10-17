@@ -8,7 +8,7 @@ async function getJsonFromFile () {
     };
     console.log(json);
 
-    const fieldNames = ["Pob","PobHomes","PobDones","Pob25_64","Pob65","Titulats","65sola","Index","Parats","RendaFamiliar"]
+    const fieldNames = ["Pob","PobDones","PobHomes","Pob25_64","Pob65","Titulats","65sola","Index","Parats","RendaFamiliar"]
     //recorre la string i extreu les entre comillas
     str = str.toString();
     str = str.split('\n');
@@ -17,10 +17,10 @@ async function getJsonFromFile () {
        let line = str[i].split(';');
        console.log(`line:${line}`);
         if (i == 1) {
-            json.Barri = line[0]
+            json.Barri = line[2]
         }
        if (i > 1){
-            json.Data[fieldNames[i-2]] = line[0]
+            json.Data[fieldNames[i-2]] = line[2]
        }
     }
 
