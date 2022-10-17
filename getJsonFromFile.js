@@ -2,7 +2,7 @@ const fs = require('fs/promises')
 
 async function getJsonFromFile (id) {
 
-    
+
     var str = await fs.readFile(`./csvs/barris${id}.csv`);
     // console.log(str);
     let json = {
@@ -26,7 +26,7 @@ async function getJsonFromFile (id) {
             json.Data[fieldNames[i-2]] = line[2]
        }
     }
-    await fs.writeFile(`./jsons/${json.Barri}.json`, JSON.stringify(json))
+    // await fs.writeFile(`./jsons/${json.Barri}.json`, JSON.stringify(json))
     // console.log(`json: `);
     // console.log(json);
     // console.log(json.Barri);
