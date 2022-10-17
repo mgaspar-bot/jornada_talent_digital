@@ -21,6 +21,7 @@ async function getJsonFromFile () {
         console.log(line);
         console.log(i);
     }
+    console.log(json);
     return json;
 }
 
