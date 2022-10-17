@@ -1,27 +1,20 @@
 const fs = require('fs/promises')
 
 async function getJsonFromFile () {
-    var str = await fs.readFile('./prueba.csv');
+    var str = await fs.readFile('./csvs/prueba.csv');
     let json = {
         "Barri":"",
-        "Data": {}
+        "Data": { }
     };
 
-    //parse str
-    str = str.toString();
-    str = str.split('\n');
-    for (let i = 0; i < str.length; i++){
-        let line = str[i].split(',');
-        if ( i == 1) {
-            json.Barri = line[1];
-        }
-        if ( i > 1) {
-            json.Data[line[0]] = line[1];
-        }
-        console.log(line);
-        console.log(i);
+    const fieldNames = ["Pob", "PobHomes","PobDones", "Pob65", "Titulats", "65sola", "RendaFamiliar", "Index", "Parats"]
+
+    for (let i = 0; i < str.length; i++) {
+        
     }
-    console.log(json);
+
+
+    await fs.writeFile(`./jsons/${json.Barri}.json`, JSON.stringify(json))
     return json;
 }
 
